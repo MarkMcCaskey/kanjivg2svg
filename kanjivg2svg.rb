@@ -102,7 +102,7 @@ class Importer
         case @type
         when :animated
           svg << "<path d=\"#{stroke['d']}\" style=\"#{PATH_STYLE};opacity:0\">\n"
-          svg << "  <animate attributeType=\"CSS\" attributeName=\"opacity\" from=\"0\" to=\"1\" begin=\"#{stroke_count-1}s\" dur=\"1s\" repeatCount=\"0\" fill=\"freeze\" />\n"
+          svg << "  <animate attributeType=\"CSS\" attributeName=\"opacity\" from=\"0\" to=\"1\" begin=\"#{stroke_count-1}s\" dur=\"1s\" repeatCount=\"Indefinite\" fill=\"freeze\" />\n"
           svg << "</path>\n"
         when :numbers
           x, y = move_text_relative_to_path(stroke['d'])
